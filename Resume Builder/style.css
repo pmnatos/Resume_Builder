@@ -1,0 +1,611 @@
+/* BASE STYLES
+============================================================================= */
+html         { overflow-y:auto; }
+.page        { 
+	bottom:0; 
+	padding-top:50px;
+	position:absolute; 
+	text-align:center;
+	top:0;  
+	width:100%; 
+	overflow: auto;
+}
+
+.page h1 	{ font-size:60px; }
+.page a     { margin-top:50px; }
+#about      { color:#333; position:absolute; text-align:center; top:50px; width:100%; }
+
+/* PAGES
+============================================================================= */
+.page-home 			{ background-image: url("imgs/7.jpg");}
+.page-signup 		{ background:#D50000; color:#FFEB3B; }
+.page-login 		{ background:#004D40; color:#FFF8E1; }
+.page-menu	 		{ background:#004D40; color:#FFF8E1; }
+.page-description 	{ background:#D50000; color:#FFEB3B; }
+.page-academic 		{ background:#00D0BC; color:#D50000; }
+.page-view	 		{ background:#004D40; color:#FFF8E1; }
+.page-about 		{ background:#E59400; color:#a55400; }
+.page-contact 		{ background:#ffa6bb; color:#9e0000; }
+.page-achievements	{ background:#00D0BC; color:#D50000; }
+.page-del_achievements { background:#00D0BC; color:#D50000; }
+.page-experiences	{ background:#D50000; color:#FFEB3B; }
+.page-del_experiences { background:#D50000; color:#FFEB3B; }
+.page-finish 		{ background-image: url("imgs/9.jpg"); color:#17202A; }
+.page-projects 		{ background:#ffa6bb; color:#9e0000; }
+.page-del_projects 	{ background:#ffa6bb; color:#9e0000; }
+.page-my_skill 		{ background:#D50000; color:#FFEB3B; }
+.page-del_skills 	{ background:#D50000; color:#FFEB3B; }
+.page-strengths		{ background:#00D0BC; color:#D50000; }
+.page-del_strengths	{ background:#00D0BC; color:#D50000; }
+.page-address 		{ background:#ffa6bb; color:#9e0000; }
+.page-update_address{ background:#ffa6bb; color:#9e0000; }
+.page-phone_no 		{ background:#E59400; color:#a55400; }
+.page-del_phone_no	{ background:#E59400; color:#a55400; }
+.page-web_contact	{ background:#ffa6bb; color:#9e0000; }
+.page-del_web_contact	{ background:#ffa6bb; color:#9e0000; }
+.page-hobbies		{ background:#D50000; color:#FFEB3B; }
+.page-del_hobbies	{ background:#D50000; color:#FFEB3B; }
+.page-edit  		{ background:#E59400; color:#FFF8E1; }
+.page-admin_signup	{ background:#D50000; color:#FFEB3B; }
+.page-admin_login 	{ background:#004D40; color:#FFF8E1; }
+.page-admin_menu	{ background:#ffa6bb; color:#9e0000; }
+.page-del_user	 	{ background:#D50000; color:#FFEB3B; }
+.page-resetpswd 	{ background:#ffa6bb; color:#9e0000; }
+
+
+
+
+/* ANIMATIONS
+============================================================================= */
+
+.page.ng-leave 	{ z-index:9999; }
+.page.ng-enter 	{ z-index:8888; }
+
+/* page specific animations ------------------------ */
+
+/* home -------------------------- */
+.page-home.ng-leave         {
+    -webkit-transform-origin: 0% 0%;
+	-webkit-animation: rotateFall 1s both ease-in;
+	-moz-transform-origin: 0% 0%;
+	-moz-animation: rotateFall 1s both ease-in;
+	transform-origin: 0% 0%;
+	animation: rotateFall 1s both ease-in;
+}
+.page-home.ng-enter 		{  
+    -webkit-animation:scaleUp 0.5s both ease-in;
+	-moz-animation:scaleUp 0.5s both ease-in;
+	animation:scaleUp 0.5s both ease-in;    
+}
+
+/* signup ------------------------ */
+.page-signup.ng-leave        {
+    -webkit-animation:slideOutLeft 0.5s both ease-in;
+	-moz-animation:slideOutLeft 0.5s both ease-in;
+	animation:slideOutLeft 0.5s both ease-in;   
+}
+.page-signup.ng-enter 		{  
+    -webkit-animation:slideInRight 0.5s both ease-in;
+	-moz-animation:slideInRight 0.5s both ease-in;
+	animation:slideInRight 0.5s both ease-in;    
+}
+
+/* login ---------------------- */
+.page-login.ng-leave      {
+    -webkit-transform-origin: 50% 50%;
+	-webkit-animation: rotateOutNewspaper .5s both ease-in;
+	-moz-transform-origin: 50% 50%;
+	-moz-animation: rotateOutNewspaper .5s both ease-in;
+	transform-origin: 50% 50%;
+	animation: rotateOutNewspaper .5s both ease-in;
+}
+.page-login.ng-enter 		{ 
+    -webkit-animation:slideInUp 0.5s both ease-in;
+	-moz-animation:slideInUp 0.5s both ease-in;
+	animation:slideInUp 0.5s both ease-in;  
+}
+
+/* menu ---------------------- */
+.page-menu.ng-leave      {
+    -webkit-transform-origin: 50% 50%;
+	-webkit-animation: rotateOutNewspaper .5s both ease-in;
+	-moz-transform-origin: 50% 50%;
+	-moz-animation: rotateOutNewspaper .5s both ease-in;
+	transform-origin: 50% 50%;
+	animation: rotateOutNewspaper .5s both ease-in;
+}
+.page-menu.ng-enter 		{ 
+    -webkit-animation:slideInUp 0.5s both ease-in;
+	-moz-animation:slideInUp 0.5s both ease-in;
+	animation:slideInUp 0.5s both ease-in;  
+}
+
+/* description ------------------------ */
+.page-description.ng-leave        {
+    -webkit-animation:slideOutLeft 0.5s both ease-in;
+	-moz-animation:slideOutLeft 0.5s both ease-in;
+	animation:slideOutLeft 0.5s both ease-in;   
+}
+.page-description.ng-enter 		{  
+    -webkit-animation:slideInRight 0.5s both ease-in;
+	-moz-animation:slideInRight 0.5s both ease-in;
+	animation:slideInRight 0.5s both ease-in;    
+}
+
+/* academic -------------------------- */
+.page-academic.ng-leave         {
+    -webkit-transform-origin: 0% 0%;
+	-webkit-animation: rotateFall 1s both ease-in;
+	-moz-transform-origin: 0% 0%;
+	-moz-animation: rotateFall 1s both ease-in;
+	transform-origin: 0% 0%;
+	animation: rotateFall 1s both ease-in;
+}
+.page-academic.ng-enter 		{  
+    -webkit-animation:scaleUp 0.5s both ease-in;
+	-moz-animation:scaleUp 0.5s both ease-in;
+	animation:scaleUp 0.5s both ease-in;    
+}
+
+/* view ---------------------- */
+.page-view.ng-leave      {
+    -webkit-transform-origin: 50% 50%;
+	-webkit-animation: rotateOutNewspaper .5s both ease-in;
+	-moz-transform-origin: 50% 50%;
+	-moz-animation: rotateOutNewspaper .5s both ease-in;
+	transform-origin: 50% 50%;
+	animation: rotateOutNewspaper .5s both ease-in;
+}
+.page-view.ng-enter 		{ 
+    -webkit-animation:slideInUp 0.5s both ease-in;
+	-moz-animation:slideInUp 0.5s both ease-in;
+	animation:slideInUp 0.5s both ease-in;  
+}
+
+/* about ------------------------ */
+.page-about.ng-leave        {
+    -webkit-animation:slideOutLeft 0.5s both ease-in;
+	-moz-animation:slideOutLeft 0.5s both ease-in;
+	animation:slideOutLeft 0.5s both ease-in;   
+}
+.page-about.ng-enter 		{  
+    -webkit-animation:slideInRight 0.5s both ease-in;
+	-moz-animation:slideInRight 0.5s both ease-in;
+	animation:slideInRight 0.5s both ease-in;    
+}
+
+/* contact ---------------------- */
+.page-contact.ng-leave      {
+    -webkit-transform-origin: 50% 50%;
+	-webkit-animation: rotateOutNewspaper .5s both ease-in;
+	-moz-transform-origin: 50% 50%;
+	-moz-animation: rotateOutNewspaper .5s both ease-in;
+	transform-origin: 50% 50%;
+	animation: rotateOutNewspaper .5s both ease-in;
+}
+.page-contact.ng-enter 		{ 
+    -webkit-animation:slideInUp 0.5s both ease-in;
+	-moz-animation:slideInUp 0.5s both ease-in;
+	animation:slideInUp 0.5s both ease-in;  
+}
+
+/* achievements -------------------------- */
+.page-achievements.ng-leave         {
+    -webkit-transform-origin: 0% 0%;
+	-webkit-animation: rotateFall 1s both ease-in;
+	-moz-transform-origin: 0% 0%;
+	-moz-animation: rotateFall 1s both ease-in;
+	transform-origin: 0% 0%;
+	animation: rotateFall 1s both ease-in;
+}
+.page-achievements.ng-enter 		{  
+    -webkit-animation:scaleUp 0.5s both ease-in;
+	-moz-animation:scaleUp 0.5s both ease-in;
+	animation:scaleUp 0.5s both ease-in;    
+}
+
+/* del_achievements -------------------------- */
+.page-del_achievements.ng-leave         {
+    -webkit-transform-origin: 0% 0%;
+	-webkit-animation: rotateFall 1s both ease-in;
+	-moz-transform-origin: 0% 0%;
+	-moz-animation: rotateFall 1s both ease-in;
+	transform-origin: 0% 0%;
+	animation: rotateFall 1s both ease-in;
+}
+.page-del_achievements.ng-enter 		{  
+    -webkit-animation:scaleUp 0.5s both ease-in;
+	-moz-animation:scaleUp 0.5s both ease-in;
+	animation:scaleUp 0.5s both ease-in;    
+}
+
+/* experiences ------------------------ */
+.page-experiences.ng-leave        {
+    -webkit-animation:slideOutLeft 0.5s both ease-in;
+	-moz-animation:slideOutLeft 0.5s both ease-in;
+	animation:slideOutLeft 0.5s both ease-in;   
+}
+.page-experiences.ng-enter 		{  
+    -webkit-animation:slideInRight 0.5s both ease-in;
+	-moz-animation:slideInRight 0.5s both ease-in;
+	animation:slideInRight 0.5s both ease-in;    
+}
+
+/* del_experiences ------------------------ */
+.page-del_experiences.ng-leave        {
+    -webkit-animation:slideOutLeft 0.5s both ease-in;
+	-moz-animation:slideOutLeft 0.5s both ease-in;
+	animation:slideOutLeft 0.5s both ease-in;   
+}
+.page-del_experiences.ng-enter 		{  	
+    -webkit-animation:slideInRight 0.5s both ease-in;
+	-moz-animation:slideInRight 0.5s both ease-in;
+	animation:slideInRight 0.5s both ease-in;    
+}
+
+/* finished ---------------------- */
+.page-finish.ng-leave      {
+    -webkit-transform-origin: 50% 50%;
+	-webkit-animation: rotateOutNewspaper .5s both ease-in;
+	-moz-transform-origin: 50% 50%;
+	-moz-animation: rotateOutNewspaper .5s both ease-in;
+	transform-origin: 50% 50%;
+	animation: rotateOutNewspaper .5s both ease-in;
+}
+.page-finish.ng-enter 		{ 
+    -webkit-animation:slideInUp 0.5s both ease-in;
+	-moz-animation:slideInUp 0.5s both ease-in;
+	animation:slideInUp 0.5s both ease-in;  
+}
+
+/* projects ---------------------- */
+.page-projects.ng-leave      {
+    -webkit-transform-origin: 50% 50%;
+	-webkit-animation: rotateOutNewspaper .5s both ease-in;
+	-moz-transform-origin: 50% 50%;
+	-moz-animation: rotateOutNewspaper .5s both ease-in;
+	transform-origin: 50% 50%;
+	animation: rotateOutNewspaper .5s both ease-in;
+}
+.page-projects.ng-enter 		{ 
+    -webkit-animation:slideInUp 0.5s both ease-in;
+	-moz-animation:slideInUp 0.5s both ease-in;
+	animation:slideInUp 0.5s both ease-in;  
+}
+
+/* del_projects ---------------------- */
+.page-del_projects.ng-leave      {
+    -webkit-transform-origin: 50% 50%;
+	-webkit-animation: rotateOutNewspaper .5s both ease-in;
+	-moz-transform-origin: 50% 50%;
+	-moz-animation: rotateOutNewspaper .5s both ease-in;
+	transform-origin: 50% 50%;
+	animation: rotateOutNewspaper .5s both ease-in;
+}
+.page-del_projects.ng-enter 		{ 
+    -webkit-animation:slideInUp 0.5s both ease-in;
+	-moz-animation:slideInUp 0.5s both ease-in;
+	animation:slideInUp 0.5s both ease-in;  
+}
+
+/* my_skill ------------------------ */
+.page-my_skill.ng-leave        {
+    -webkit-animation:slideOutLeft 0.5s both ease-in;
+	-moz-animation:slideOutLeft 0.5s both ease-in;
+	animation:slideOutLeft 0.5s both ease-in;   
+}
+.page-my_skill.ng-enter 		{  
+    -webkit-animation:slideInRight 0.5s both ease-in;
+	-moz-animation:slideInRight 0.5s both ease-in;
+	animation:slideInRight 0.5s both ease-in;    
+}
+
+/* del_skills ------------------------ */
+.page-del_skills.ng-leave        {
+    -webkit-animation:slideOutLeft 0.5s both ease-in;
+	-moz-animation:slideOutLeft 0.5s both ease-in;
+	animation:slideOutLeft 0.5s both ease-in;   
+}
+.page-del_skills.ng-enter 		{  
+    -webkit-animation:slideInRight 0.5s both ease-in;
+	-moz-animation:slideInRight 0.5s both ease-in;
+	animation:slideInRight 0.5s both ease-in;    
+}
+
+/* strengths -------------------------- */
+.page-strengths.ng-leave         {
+    -webkit-transform-origin: 0% 0%;
+	-webkit-animation: rotateFall 1s both ease-in;
+	-moz-transform-origin: 0% 0%;
+	-moz-animation: rotateFall 1s both ease-in;
+	transform-origin: 0% 0%;
+	animation: rotateFall 1s both ease-in;
+}
+.page-strengths.ng-enter 		{  
+    -webkit-animation:scaleUp 0.5s both ease-in;
+	-moz-animation:scaleUp 0.5s both ease-in;
+	animation:scaleUp 0.5s both ease-in;    
+}
+
+/* del_strengths -------------------------- */
+.page-del_strengths.ng-leave         {
+    -webkit-transform-origin: 0% 0%;
+	-webkit-animation: rotateFall 1s both ease-in;
+	-moz-transform-origin: 0% 0%;
+	-moz-animation: rotateFall 1s both ease-in;
+	transform-origin: 0% 0%;
+	animation: rotateFall 1s both ease-in;
+}
+.page-del_strengths.ng-enter 		{  
+    -webkit-animation:scaleUp 0.5s both ease-in;
+	-moz-animation:scaleUp 0.5s both ease-in;
+	animation:scaleUp 0.5s both ease-in;    
+}
+
+/* address ---------------------- */
+.page-address.ng-leave      {
+    -webkit-transform-origin: 50% 50%;
+	-webkit-animation: rotateOutNewspaper .5s both ease-in;
+	-moz-transform-origin: 50% 50%;
+	-moz-animation: rotateOutNewspaper .5s both ease-in;
+	transform-origin: 50% 50%;
+	animation: rotateOutNewspaper .5s both ease-in;
+}
+.page-address.ng-enter 		{ 
+    -webkit-animation:slideInUp 0.5s both ease-in;
+	-moz-animation:slideInUp 0.5s both ease-in;
+	animation:slideInUp 0.5s both ease-in;  
+}
+
+/* update_address ---------------------- */
+.page-updaate_address.ng-leave      {
+    -webkit-transform-origin: 50% 50%;
+	-webkit-animation: rotateOutNewspaper .5s both ease-in;
+	-moz-transform-origin: 50% 50%;
+	-moz-animation: rotateOutNewspaper .5s both ease-in;
+	transform-origin: 50% 50%;
+	animation: rotateOutNewspaper .5s both ease-in;
+}
+.page-update_address.ng-enter 		{ 
+    -webkit-animation:slideInUp 0.5s both ease-in;
+	-moz-animation:slideInUp 0.5s both ease-in;
+	animation:slideInUp 0.5s both ease-in;  
+}
+
+/* phone_no ------------------------ */
+.page-phone_no.ng-leave        {
+    -webkit-animation:slideOutLeft 0.5s both ease-in;
+	-moz-animation:slideOutLeft 0.5s both ease-in;
+	animation:slideOutLeft 0.5s both ease-in;   
+}
+.page-phone_no.ng-enter 		{  
+    -webkit-animation:slideInRight 0.5s both ease-in;
+	-moz-animation:slideInRight 0.5s both ease-in;
+	animation:slideInRight 0.5s both ease-in;    
+}
+
+/* del_phone_no ------------------------ */
+.page-del_phone_no.ng-leave        {
+    -webkit-animation:slideOutLeft 0.5s both ease-in;
+	-moz-animation:slideOutLeft 0.5s both ease-in;
+	animation:slideOutLeft 0.5s both ease-in;   
+}
+.page-del_phone_no.ng-enter 		{  
+    -webkit-animation:slideInRight 0.5s both ease-in;
+	-moz-animation:slideInRight 0.5s both ease-in;
+	animation:slideInRight 0.5s both ease-in;    
+}
+
+/* web_contact ---------------------- */
+.page-web_contact.ng-leave      {
+    -webkit-transform-origin: 50% 50%;
+	-webkit-animation: rotateOutNewspaper .5s both ease-in;
+	-moz-transform-origin: 50% 50%;
+	-moz-animation: rotateOutNewspaper .5s both ease-in;
+	transform-origin: 50% 50%;
+	animation: rotateOutNewspaper .5s both ease-in;
+}
+.page-web_contact.ng-enter 		{ 
+    -webkit-animation:slideInUp 0.5s both ease-in;
+	-moz-animation:slideInUp 0.5s both ease-in;
+	animation:slideInUp 0.5s both ease-in;  
+}
+
+/* del_web_contact ---------------------- */
+.page-del_web_contact.ng-leave      {
+    -webkit-transform-origin: 50% 50%;
+	-webkit-animation: rotateOutNewspaper .5s both ease-in;
+	-moz-transform-origin: 50% 50%;
+	-moz-animation: rotateOutNewspaper .5s both ease-in;
+	transform-origin: 50% 50%;
+	animation: rotateOutNewspaper .5s both ease-in;
+}
+.page-del_web_contact.ng-enter 		{ 
+    -webkit-animation:slideInUp 0.5s both ease-in;
+	-moz-animation:slideInUp 0.5s both ease-in;
+	animation:slideInUp 0.5s both ease-in;  
+}
+
+/* edit ---------------------- */
+.page-edit.ng-leave      {
+    -webkit-transform-origin: 50% 50%;
+	-webkit-animation: rotateOutNewspaper .5s both ease-in;
+	-moz-transform-origin: 50% 50%;
+	-moz-animation: rotateOutNewspaper .5s both ease-in;
+	transform-origin: 50% 50%;
+	animation: rotateOutNewspaper .5s both ease-in;
+}
+.page-edit.ng-enter 		{ 
+    -webkit-animation:slideInUp 0.5s both ease-in;
+	-moz-animation:slideInUp 0.5s both ease-in;
+	animation:slideInUp 0.5s both ease-in;  
+}
+
+/* hobbies -------------------------- */
+.page-hobbies.ng-leave         {
+    -webkit-transform-origin: 0% 0%;
+	-webkit-animation: rotateFall 1s both ease-in;
+	-moz-transform-origin: 0% 0%;
+	-moz-animation: rotateFall 1s both ease-in;
+	transform-origin: 0% 0%;
+	animation: rotateFall 1s both ease-in;
+}
+.page-hobbies.ng-enter 		{  
+    -webkit-animation:scaleUp 0.5s both ease-in;
+	-moz-animation:scaleUp 0.5s both ease-in;
+	animation:scaleUp 0.5s both ease-in;    
+}
+
+/* admin_signup ------------------------ */
+.page-admin_signup.ng-leave        {
+    -webkit-animation:slideOutLeft 0.5s both ease-in;
+	-moz-animation:slideOutLeft 0.5s both ease-in;
+	animation:slideOutLeft 0.5s both ease-in;   
+}
+.page-admin_signup.ng-enter 		{  
+    -webkit-animation:slideInRight 0.5s both ease-in;
+	-moz-animation:slideInRight 0.5s both ease-in;
+	animation:slideInRight 0.5s both ease-in;    
+}
+
+/* admin_login ---------------------- */
+.page-admin_login.ng-leave      {
+    -webkit-transform-origin: 50% 50%;
+	-webkit-animation: rotateOutNewspaper .5s both ease-in;
+	-moz-transform-origin: 50% 50%;
+	-moz-animation: rotateOutNewspaper .5s both ease-in;
+	transform-origin: 50% 50%;
+	animation: rotateOutNewspaper .5s both ease-in;
+}
+.page-admin_login.ng-enter 		{ 
+    -webkit-animation:slideInUp 0.5s both ease-in;
+	-moz-animation:slideInUp 0.5s both ease-in;
+	animation:slideInUp 0.5s both ease-in;  
+}
+
+/* admin_menu ---------------------- */
+.page-admin_menu.ng-leave      {
+    -webkit-transform-origin: 50% 50%;
+	-webkit-animation: rotateOutNewspaper .5s both ease-in;
+	-moz-transform-origin: 50% 50%;
+	-moz-animation: rotateOutNewspaper .5s both ease-in;
+	transform-origin: 50% 50%;
+	animation: rotateOutNewspaper .5s both ease-in;
+}
+.page-admin_menu.ng-enter 		{ 
+    -webkit-animation:slideInUp 0.5s both ease-in;
+	-moz-animation:slideInUp 0.5s both ease-in;
+	animation:slideInUp 0.5s both ease-in;  
+}
+
+/* del_user ------------------------ */
+.page-del_user.ng-leave        {
+    -webkit-animation:slideOutLeft 0.5s both ease-in;
+	-moz-animation:slideOutLeft 0.5s both ease-in;
+	animation:slideOutLeft 0.5s both ease-in;   
+}
+.page-del_user.ng-enter 		{  
+    -webkit-animation:slideInRight 0.5s both ease-in;
+	-moz-animation:slideInRight 0.5s both ease-in;
+	animation:slideInRight 0.5s both ease-in;    
+}
+
+/* resetpswd ---------------------- */
+.page-resetpswd.ng-leave      {
+    -webkit-transform-origin: 50% 50%;
+	-webkit-animation: rotateOutNewspaper .5s both ease-in;
+	-moz-transform-origin: 50% 50%;
+	-moz-animation: rotateOutNewspaper .5s both ease-in;
+	transform-origin: 50% 50%;
+	animation: rotateOutNewspaper .5s both ease-in;
+}
+.page-resetpswd.ng-enter 		{ 
+    -webkit-animation:slideInUp 0.5s both ease-in;
+	-moz-animation:slideInUp 0.5s both ease-in;
+	animation:slideInUp 0.5s both ease-in;  
+}
+
+
+/* rotate and fall */
+@-webkit-keyframes rotateFall {
+	0% { -webkit-transform: rotateZ(0deg); }
+	20% { -webkit-transform: rotateZ(10deg); -webkit-animation-timing-function: ease-out; }
+	40% { -webkit-transform: rotateZ(17deg); }
+	60% { -webkit-transform: rotateZ(16deg); }
+	100% { -webkit-transform: translateY(100%) rotateZ(17deg); }
+}
+@-moz-keyframes rotateFall {
+	0% { -moz-transform: rotateZ(0deg); }
+	20% { -moz-transform: rotateZ(10deg); -moz-animation-timing-function: ease-out; }
+	40% { -moz-transform: rotateZ(17deg); }
+	60% { -moz-transform: rotateZ(16deg); }
+	100% { -moz-transform: translateY(100%) rotateZ(17deg); }
+}
+@keyframes rotateFall {
+	0% { transform: rotateZ(0deg); }
+	20% { transform: rotateZ(10deg); animation-timing-function: ease-out; }
+	40% { transform: rotateZ(17deg); }
+	60% { transform: rotateZ(16deg); }
+	100% { transform: translateY(100%) rotateZ(17deg); }
+}
+
+/* scale up */
+@keyframes scaleUp {
+	from 		{ opacity: 0.3; transform: scale(0.8); }
+}
+@-moz-keyframes scaleUp {
+	from 		{ opacity: 0.3; -moz-transform: scale(0.8); }
+}
+@-webkit-keyframes scaleUp {
+	from 		{ opacity: 0.3; -webkit-transform: scale(0.8); }
+}
+
+/* slide in from the right */
+@keyframes slideInRight {
+	from 	{ transform:translateX(100%); }
+	to 		{ transform: translateX(0); }
+}
+@-moz-keyframes slideInRight {
+	from 	{ -moz-transform:translateX(100%); }
+	to 		{ -moz-transform: translateX(0); }
+}
+@-webkit-keyframes slideInRight {
+	from 	{ -webkit-transform:translateX(100%); }
+	to 		{ -webkit-transform: translateX(0); }
+}
+
+/* slide in from the bottom */
+@keyframes slideInUp {
+	from 	{ transform:translateY(100%); }
+	to 		{ transform: translateY(0); }
+}
+@-moz-keyframes slideInUp {
+	from 	{ -moz-transform:translateY(100%); }
+	to 		{ -moz-transform: translateY(0); }
+}
+@-webkit-keyframes slideInUp {
+	from 	{ -webkit-transform:translateY(100%); }
+	to 		{ -webkit-transform: translateY(0); }
+}
+
+/* slide in from the bottom */
+@keyframes slideOutLeft {
+	to 		{ transform: translateX(-100%); }
+}
+@-moz-keyframes slideOutLeft {	
+	to 		{ -moz-transform: translateX(-100%); }
+}
+@-webkit-keyframes slideOutLeft {
+	to 		{ -webkit-transform: translateX(-100%); }
+}
+
+/* rotate out newspaper */
+@-webkit-keyframes rotateOutNewspaper {
+	to { -webkit-transform: translateZ(-3000px) rotateZ(360deg); opacity: 0; }
+}
+@-moz-keyframes rotateOutNewspaper {
+	to { -moz-transform: translateZ(-3000px) rotateZ(360deg); opacity: 0; }
+}
+@keyframes rotateOutNewspaper {
+	to { transform: translateZ(-3000px) rotateZ(360deg); opacity: 0; }
+}

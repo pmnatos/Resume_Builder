@@ -1,0 +1,79 @@
+<!-- page-signup.html -->
+<h1>Signup</h1>
+</br></br></br>
+
+<div class="container">
+<form action="#sign_up_report" class="form-horizontal" role="form" method="POST">
+    <div class="form-group">
+      <label class="control-label col-sm-4" for="name">Name:</label>
+      <div class="col-sm-4">
+        <input type="name" class="form-control" id="name" name="name" placeholder="Enter name">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-4" for="email">Email:</label>
+      <div class="col-sm-4">
+        <input type="email" class="form-control" id="email" name="email" placeholder="Enter email">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-4" for="phone_no">Phone Number:</label>
+      <div class="col-sm-4">
+        <input type="phone" class="form-control" id="phone_no" name="phone_no" placeholder="Enter phone number">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-4" for="pwd">Password:</label>
+      <div class="col-sm-4">          
+        <input type="password" class="form-control" id="pwd" name="pwd" placeholder="Enter password">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-4" for="repwd">Confirm Password:</label>
+      <div class="col-sm-4">          
+        <input type="password" class="form-control" id="repwd" name="repwd" placeholder="Confirm password">
+      </div>
+    </div>
+    <div class="form-group">        
+      <div class="col-sm-offset-3 col-sm-6">
+        <button type="submit" class="btn btn-default">Sign up</button>
+      </div>
+    </div>
+</form>
+</div>
+<?php
+require_once 'connect.php';
+if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['phone_no']) && isset($_POST['pwd']) && isset($_POST['repwd']))
+{
+  $name = $_POST['name'];
+  $email = $_POST['email'];
+  $phone_no = $_POST['phone_no'];
+  $pwd = $_POST['pwd'];
+  $repwd = $_POST['repwd'];
+
+  if($pwd === $repwd)
+  {
+    $sql = "SELECT EMAIL_ID FROM USERS WHERE EMAIL_ID =".$email;
+    $result = $conn->query($sql);
+    if(!$result)
+      {  
+          $sql = "INSERT INTO USERS VALUES ('','$name','$email','$phone_no',SHA2('$pwd',256))";
+        $result = $conn->query($sql);
+        if($result)
+          { echo "<h1>User Registered Successfully.</h1>"; }
+      }
+    else
+    {
+      echo "<h1>User already Exists!!!</h1>";
+    }
+  }
+  else
+  {
+    echo "<h1>Passwords Don't Match!!!</h1>";
+  } 
+
+}
+else
+{
+  echo "<h1>Please Enter all the fields!!!</h1>";
+}
